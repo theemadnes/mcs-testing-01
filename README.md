@@ -94,4 +94,7 @@ EOF
 
 kubectl --context=$CLUSTER_1 apply -k whereami-http-frontend/variant
 kubectl --context=$CLUSTER_2 apply -k whereami-http-frontend/variant
+
+# doing some basic testing
+while true; do curl http://34.136.219.95 -s | jq '.' && sleep .5; done
 ```
